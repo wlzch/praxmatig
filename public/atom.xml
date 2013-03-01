@@ -4,7 +4,7 @@
   <title><![CDATA[Praxmatig]]></title>
   <link href="http://praxmatig.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://praxmatig.herokuapp.com/"/>
-  <updated>2013-03-01T20:02:12+07:00</updated>
+  <updated>2013-03-01T20:27:57+07:00</updated>
   <id>http://praxmatig.herokuapp.com/</id>
   <author>
     <name><![CDATA[wil huang]]></name>
@@ -12,6 +12,110 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vertical Centering Image]]></title>
+    <link href="http://praxmatig.herokuapp.com/blog/2013/03/01/vertical-centering-image/"/>
+    <updated>2013-03-01T20:04:00+07:00</updated>
+    <id>http://praxmatig.herokuapp.com/blog/2013/03/01/vertical-centering-image</id>
+    <content type="html"><![CDATA[<p>Hari ini saya akan bercerita tentang cara untuk melakukan vertical centering pada image, masalah yang lumayan umum ditemui untuk website yang akan menampilkan gambar dengan berbagai macam dimensi dan orientasi.</p>
+
+<!-- more -->
+
+
+<p>Karena judul KP saya berhubungan dengan foto, jadi saya sendiri juga menemui masalah ini pada saat pembuatan dan akan membagikan caranya kepada anda sekarang. Sebelumnya, inilah beberapa contoh dari apa yang terjadi ketika image dengan dimensi yang berbeda dimasukkan.</p>
+
+<p><a href="http://img521.imageshack.us/img521/2050/rawpose3.jpg"><img src="http://img521.imageshack.us/img521/2050/rawpose3.jpg" alt="Vertical Center Image" /></a>
+<a href="http://img4.imageshack.us/img4/4779/rawpose2.jpg"><img src="http://img4.imageshack.us/img4/4779/rawpose2.jpg" alt="Vertical Center Image" /></a>
+<a href="http://img803.imageshack.us/img803/6627/rawpose1.jpg"><img src="http://img803.imageshack.us/img803/6627/rawpose1.jpg" alt="Vertical Center Image" /></a></p>
+
+<p>Dapat dilihat bahwa pada gambar pertama yang berorientasi landspace dan berdimensi besar, gambar tersebut memenuhi containernya secara pas.</p>
+
+<p>Pada gambar kedua dengan orientasi portrait dan height yang besar, gambar memenuhi bagian vertical secara pas tetapi diposisikan ke tengah secara horizontal.</p>
+
+<p>Di gambar terakhir dengan orientasi landspace dan dimensi yang lebih kecil dari container dapat kita lihat bahwa gambar diposisikan ketengah secara vertical dan horizontal.</p>
+
+<p>Berikut adalah html+css yang dibutuhkan melakukan image vertical centering. Anda dapat menggunakan jsfiddle dibawah untuk melakukan percobaan.</p>
+
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/KZQT8/embedded/html,css,result,js/light/"></iframe>
+
+
+<p>Inti dari teknik ini sebenarnya terletak pada <a href="http://www.impressivewebs.com/inline-block">inline-block</a> display dan <a href="https://developer.mozilla.org/en-US/docs/CSS/vertical-align">vertical-align</a>.</p>
+
+<p>Menurut <a href="http://robertnyman.com/2010/02/24/css-display-inline-block-why-it-rocks-and-why-it-sucks/">Robert Nyman</a>:</p>
+
+<blockquote><p>INLINE-BLOCK ADALAH SUATU CARA UNTUK MEMBUAT ELEMEN INLINE TETAPI MEMILIKI SIFAT-SIFAT BLOCK SEPERTI WIDTH, HEIGHT, MARGIN DAN PADDING.</p></blockquote>
+
+<p>Dan menurut <a href="https://developer.mozilla.org/en-US/docs/CSS/vertical-align">Mozilla Developer Network</a></p>
+
+<blockquote><p>VERTICAL-ALIGN MENSPESIFIKASIKAN BAGAIMANA SUATU ELEMEN AKAN DIPOSISIKAN SECARA VERTIKAL. VERTICAL-ALIGN HANYA BERLAKU PADA ELEMEN YANG BERDISPLAY INLINE ATAU TABLE-CELL.</p></blockquote>
+
+<p>Berdasarkan definisi diatas dapat disimpulkan bahwa 2 atau lebih elemen dapat disejajarkan secara vertical jika elemen tersebut bersifat inline atau table-cell.</p>
+
+<p>Jika 2 elemen yang berdisplay inline-block diberikan vertical-align: middle maka elemen-elemen tersebut akan diposisikan ke tengah secara vertikal. Hasilnya dapat dilihat pada gambar berikut.</p>
+
+<p><img class="center" src="http://img266.imageshack.us/img266/9262/inlineblock.jpg"></p>
+
+<p>Dengan teknik-teknik tersebut, maka kita telah dapat membuat Vertical Center Image!!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.image-viewer</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="m">#000</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">line-height</span><span class="o">:</span> <span class="m">480px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>.image-viewer adalah container dari image. Disini kita harus memberikan line-height dengan nilai yang diinginkan untuk height minimal dari .image-viewer sehingga meskipun gambar yang ada didalamnya kecil container tidak akan ikut mengecil tetapi jika gambar didalamnya besar container akan ikut membesar. Selain itu kita memberikan text-align: center sehingga image didalamnya akan terposisi ke tengah secara horizontal. Ingatlah bahwa kita telah mendefinisikan image sebagai elemen inline sehingga bisa dialignkan sebagaimana kita mengalignkan text.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.image-viewer</span> <span class="nt">img</span><span class="nd">:before</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">max-height</span><span class="o">:</span> <span class="m">720px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>:before merupakan salah satu pseudoclasses yang dapat digunakan. Ingat bagaimana 2 elemen inline-block dapat divertical-alignkan? Disini kita akan membuat elemen invisible yang digunakan untuk membantu mengalignkan image.</p>
+
+<p><img class="center" src="http://img203.imageshack.us/img203/742/verticalalign.jpg"></p>
+
+<p>kotak yang berwarna hijau tersebutlah yang akan membantu image tervertical-align. heightnya diset menjadi 100% sehingga image bisa benar-benar diposisikan ditengah.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.image-viewer</span> <span class="nt">img</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">max-height</span><span class="o">:</span> <span class="m">720px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">max-width</span><span class="o">:</span> <span class="m">720px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Saya rasa anda sudah dapat mengerti baris css diatas. max-height dan max-width digunakan sehingga image tidak akan ditampilkan terlalu besar sehingga menggangu tampilan lainnya.</p>
+
+<p>Pada postingan berikutnya, saya akan memberikan tutorial untuk menjustify div seperti pada <a href="http://deviantart.com">deviantart.com</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan]]></title>
