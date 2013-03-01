@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Compero | Praxmatig]]></title>
+  <link href="http://praxmatig.herokuapp.com/blog/categories/compero/atom.xml" rel="self"/>
+  <link href="http://praxmatig.herokuapp.com/"/>
+  <updated>2013-03-01T20:02:12+07:00</updated>
+  <id>http://praxmatig.herokuapp.com/</id>
+  <author>
+    <name><![CDATA[wil huang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan]]></title>
+    <link href="http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/"/>
+    <updated>2013-03-01T19:31:00+07:00</updated>
+    <id>http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan</id>
+    <content type="html"><![CDATA[<p>Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image secara berdampingan.
+<a href="http://img839.imageshack.us/img839/4298/screenshotfdg.png">Compero</a></p>
+
+<p>Untuk mencobanya download <a href="https://github.com/wlzch/compero/archive/master.zip">compero</a>, setelah itu mengikuti <a href="http://developer.chrome.com/extensions/getstarted.html">tutorial</a> pada bagian "Load The Extension"</p>
+
+<p>Cara penggunaan compero saya usahakan semudah mungkin. Tapi kalau anda memiliki ide yang lebih baik, silahkan komentar atau submit issue di <a href="https://github.com/wlzch/compero">repository</a>.</p>
+
+<p>Setelah compero terinstall jika anda mengklik kanan pada image anda dapat melihat tulisan "Add to Compero". Jika anda mengklik tulisan tersebut, maka secara otomatis image tersebut dimasukkan ke compero. (terima kasih kepada <a href="https://github.com/kiddo">suwandi halim</a> untuk idenya). Jika anda mengklik icon Compero di toolbar, anda telah dapat melihat image yang anda kirimkan tadi! Mudah kan?</p>
+
+<p>Pada saat anda memasukkan image, maka image tersebut akan diresize menjadi 200px. Tapi jangan khawatir karena ada slider untuk mengatur ukuran image dari range 200px - 400px. Range ini yang dipilih karena batasan chrome yang hanya memungkinkan popup memiliki lebar 800px. Jika anda ingin menghapus image yang telah anda masukkan, anda tinggal mengklik tombol clear dan image pun akan hilang.</p>
+
+<p>Dengan kebutuhan seperti diatas, saya akan mengajari anda bagaimana membuat chrome extension.</p>
+
+<!-- more -->
+
+
+<h3>Chrome Extension</h3>
+
+<p>Chrome Extension digunakan untuk menambah fungsionalitas dari chrome browser. Extension dapat dibuat hanya dengan html + css + javascript. Jadi siapapun yang memahami ketiga bahasa tersebut dapat membuatnya. Semua extension dapat diinstall dari chrome <a href="https://chrome.google.com/webstore/category/extensions">webstore</a>. Setelah terinstall, akan muncul icon disebelah omnibox(tempat anda mengetikkan url).</p>
+
+<h3>Manifest</h3>
+
+<p>Setiap extension membutuhkan 1 file manifest.json. File ini memuat konfigurasi-konfigurasi yang akan dibaca oleh chrome pada saat penginstalan extension.</p>
+
+<p>``` json manifest.json
+{</p>
+
+<pre><code>"manifest_version": 2,
+"name": "Image Comparer",
+"description": "Compares 2 or more images",
+"homepage_url": "https://github.com/wlzch/compero.git",
+"version": "0.1",
+"icons": {
+  "16": "icon16.png",
+  "48": "icon48.png",
+  "128": "icon128.png"
+},
+"offline_enabled": true,
+"permissions": [
+  "storage",
+  "tabs",
+  "http://*/*",
+  "https://*/*",
+  "contextMenus",
+  "chrome://favicon/"
+],
+"background": {
+    "scripts": ["background.js"]
+},
+"browser_action": {
+  "default_icon": "icon.png",
+  "defaul_title": "Compero",
+  "default_popup": "popup.html"
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<h4>manifest_version</h4>
+
+<p>Mendefinisikan versi manifest yang digunakan. Versi yang dianjurkan adalah versi 2 karena versi manifest versi 1 sudah deprecated.</p>
+
+<h4>name</h4>
+
+<p>Nama dari extension.</p>
+
+<h4>description</h4>
+
+<p>Deskripsi singkat extension yang akan muncul di chrome webstore</p>
+
+<h4>homepage_url</h4>
+
+<p>Halaman utama dari extension.</p>
+
+<h4>version</h4>
+
+<p>Harus diingat bahwa versi ini beda dengan manifest_version. Versi disini mengacu kepada versi dari extension. Setiap kali extension diupload ke chrome webstore, extension harus dinaikkan.</p>
+
+<h4>icons</h4>
+
+<p>Icon-icon yang akan digunakan oleh chrome webstore. Dianjurkan untuk membuat icon dengan ukuran 16x16, 48x48 dan 128x128.</p>
+
+<h4>offline_enabled</h4>
+
+<p>Mendefinisikan apakah extension aktif jika chrome tidak terhubung dengan internet.</p>
+
+<h4>permissions</h4>
+
+<p>Mendefinisikan permision-permission apa saja yang diperlukan oleh extension. Anda harus mendefinisikan permission untuk fitur-fitur tertentu. Misalnya Compero membutuhkan chrome storage untuk menyimpan data, contextMenus untuk menambah menu pada saat klik kanan. Compero juga mendefinisikan permission "http://<em>/</em>"; dan "https://<em>/</em>"; yang artinya Compero dapat mengakses seluruh website yang dikunjungi user. Jika anda hanya perlu berinteraksi dengan salah satu website misalnya google.com anda dapat menggantinya dengan "https://<em>.google.com"; dan "http://</em>.google.com";</p>
+
+<h4>background</h4>
+
+<p>Mendefinisikan script yang akan dijalankan dibackground. Sciprt ini akan berjalan terus sepanjang browser tidak ditutup.</p>
+
+<h4>browser_action</h4>
+
+<p>Mendefinisikan icon yang akan muncul di toolbar google chrome termasuk icon, title (tulisan yang muncul jika dihover), badge (tulisan diatas icon) dan popup (halaman html yang muncul jika icon diklik)</p>
+
+<p>Untuk konfigurasi lengkap dapat dilihat di website chrome</p>
+
+<h3>Background.js</h3>
+
+<p>``` javascript
+var images = [];</p>
+
+<p>var getImages = function() {</p>
+
+<pre><code>return images;
+</code></pre>
+
+<p>}</p>
+
+<p>var clearImages = function() {</p>
+
+<pre><code>images = [];
+</code></pre>
+
+<p>}</p>
+
+<p>var addImage = function(info, tab) {</p>
+
+<pre><code>images.push(info.srcUrl);
+</code></pre>
+
+<p>}</p>
+
+<p>chrome.contextMenus.create({"title": "Add to Compero", "contexts": ["image"], "onclick": addImage});
+```
+Fungsi dari background.js sangat mudah, kita akan menambahkan action pada saat image diklik kanan dengan menggunakan contextMenus API</p>
+
+<p><code>javascript
+chrome.contextMenus.create({"title": "Add to Compero", "contexts": ["image"], "onclick": addImage});
+</code>
+Snippet diatas akan menambahkan action “Add to Compero” jika dilakukan klik kanan pada image (didefinisikan oleh key “contexts”). Jika action “Add to Compero” diklik, maka fungsi addImage akan dijalankan dengan mengirimkan 2 parameter kedalamnya. Parameter pertama bertipe onClickData yang berisi info mengenai elemen yang diklik. Parameter kedua bertipe Tab yang berisi informasi mengenai tab dimana action tersebut dilakukan.</p>
+
+<p>Fungsi addImage hanyalah fungsi sederhana yang akan menambahkan url dari image yang di klik kedalam variabel images. Karena action “Add to Compero” hanya didefinisikan pada image, maka kita dapat langsung menggunaka srcUrl dari tipe onClickData untuk mengambil url dari image.</p>
+
+<p>Selain itu, terdapat fungsi getImages dan clearImages. Fungsi-fungsi ini akan digunakan oleh halaman popup untuk mengambil dan menghapus data image.</p>
+
+<h3>Popup.html</h3>
+
+<p>``` html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Compero - Image Comparer&lt;/title&gt;
+&lt;link href="jquery-ui.min.css" type="text/css" rel="stylesheet" /&gt;
+&lt;link href="style.css" type="text/css" rel="stylesheet" /&gt;
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;script src="popup.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>  </head>
+  <body></p>
+
+<pre><code>&lt;div id="controls"&gt;
+    &lt;div&gt;&lt;button id="clear-images"&gt;Clear&lt;/button&gt;&lt;/div&gt;
+    &lt;div id="slider"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="images"&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```
+Popup.html inilah yang akan ditampilkan jika icon compero di klik. Terdapat 1 tombol untuk menghapus images, slider untuk mengatur ukuran image dan 1 div sebagai container dari image yang akan kita bandingkan.</p>
+
+<h3>Popup.js</h3>
+
+<p>``` javascript
+var storage, bg, imageContainer;
+var getImages = function(callback) {</p>
+
+<pre><code>var images;
+storage.get('images', function(items) {
+    images = items.images || [];
+
+    callback(images);
+});
+</code></pre>
+
+<p>}</p>
+
+<p>var insertImage = function(src) {</p>
+
+<pre><code>var image = $('&lt;img&gt;');
+image.addClass('image');
+image.attr('src', src);
+image.appendTo(imageContainer);
+</code></pre>
+
+<p>}</p>
+
+<p>var addImageToStorage = function(src) {</p>
+
+<pre><code>getImages(function(images) {
+    images.push(src);
+    storage.set({images: images});
+});
+</code></pre>
+
+<p>}</p>
+
+<p>var loadBackgroundImages = function() {</p>
+
+<pre><code>var bgImages = bg.getImages();
+for (var i = 0, len = bgImages.length; i &lt; len; i++) {
+    insertImage(bgImages[i]);
+    addImageToStorage(bgImages[i]);
+}
+bg.clearImages();
+</code></pre>
+
+<p>}</p>
+
+<p>var loadStorage = function() {</p>
+
+<pre><code>getImages(function(images) {
+    for (var i = 0, len = images.length; i &lt; len; i++) {
+        insertImage(images[i]);
+    }
+});
+</code></pre>
+
+<p>}</p>
+
+<p>var loadImages = function() {</p>
+
+<pre><code>loadBackgroundImages();
+loadStorage();
+</code></pre>
+
+<p>}</p>
+
+<p>var onMessageListener = function(request, sender, sendResponse) {</p>
+
+<pre><code>insertImage(request.src);
+addImageToStorage(request.src);
+</code></pre>
+
+<p>}</p>
+
+<p>var clearClicked = function() {</p>
+
+<pre><code>storage.clear();
+$('.image').remove();
+</code></pre>
+
+<p>}</p>
+
+<p>document.addEventListener('DOMContentLoaded', function () {</p>
+
+<pre><code>bg = chrome.extension.getBackgroundPage();
+storage = chrome.storage.local;
+imageContainer = $('#images');
+var slider = $('#slider');
+$('#clear-images').click(clearClicked);
+slider.slider({
+    min: 200,
+    max: 800,
+    step: 10,
+    value: 200,
+    slide: function(event, ui) {
+        var images = $('.image');
+        images.width(slider.slider('value')+"px");
+        images.height(slider.slider('value')+"px");
+    }
+});
+loadImages();
+</code></pre>
+
+<p>});
+```
+Popup.js merupakan script yang paling penting untuk compero. Akan kita bahas fungsinya satu-persatu.</p>
+
+<p>``` javascript
+document.addEventListener('DOMContentLoaded', function () {</p>
+
+<pre><code>bg = chrome.extension.getBackgroundPage();
+storage = chrome.storage.local;
+imageContainer = $('#images');
+var slider = $('#slider');
+$('#clear-images').click(clearClicked);
+slider.slider({
+    min: 200,
+    max: 800,
+    step: 10,
+    value: 200,
+    slide: function(event, ui) {
+        var images = $('.image');
+        images.width(slider.slider('value')+"px");
+        images.height(slider.slider('value')+"px");
+    }
+});
+loadImages();
+</code></pre>
+
+<p>});
+```
+Pada snippet diatas, kita akan melisten pada event DomContentLoaded. Event ini akan terjadi ketika terjadi action klik pada icon compero dan DOM dari halaman tersebut telah terbentuk.</p>
+
+<p>Pada line 1, variabel bg di set sebagai background page yang telah kita definisikan sebelumnya dengan method getBackgroundPage. Dengan adanya variabel bg, kita dapat mengakses setiap property dan method yang ada pada background page termasuk method getImages dan clearImages yang nantinya akan kita gunakan.</p>
+
+<p>Pada line 2, variabel storage di set sebagai chrome storage. Kita akan menggunakannya untuk menyimpan dan mengambil url-url dari gambar yang telah diadd sebelumnya.</p>
+
+<p>Setiap kali icon compero di klik, kita akan memanggil fungsi loadImages dimana fungsi – fungsi bantuan lainnya.</p>
+
+<p>``` javascript
+var insertImage = function(src) {</p>
+
+<pre><code>var image = $('&lt;img&gt;');
+image.addClass('image');
+image.attr('src', src);
+image.appendTo(imageContainer);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>insertImage berfungsi untuk membuat tag image baru dan memasukkannya ke DOM.</p>
+
+<p>``` javascript
+var getImages = function(callback) {</p>
+
+<pre><code>var images;
+storage.get('images', function(items) {
+    images = items.images || [];
+
+    callback(images);
+});
+</code></pre>
+
+<p>}
+```</p>
+
+<p>getImages berfungsi untuk mengambil url image-image yang telah disimpan. getImages menerima 1 parameter yaitu callback yaitu berupa fungsi yang akan dijalankan setelah image-image terload. fungsi callback akan diberikan 1 parameter berupa image-image yang terload tadi. Hal ini dikarenakan storage bersifat asynchronous (non-blocking). Singkatnya, jika biasanya program itu jalan baris-perbaris secara berurutan, storage.get akan menjalankan fungsinya dan langsung melanjutkan program bahkan sebelum fungsinya mengembalikan hasil. Setelah fungsi tersebut siap dijalankan barulah parameter yang berupa fungsi lain akan dijalankan.</p>
+
+<p>``` javascript
+var addImageToStorage = function(src) {</p>
+
+<pre><code>getImages(function(images) {
+    images.push(src);
+    storage.set({images: images});
+});
+</code></pre>
+
+<p>}
+```</p>
+
+<p>addImageToStorage berfungsi untuk menambahkan url image ke storage.</p>
+
+<p>``` javascript
+var loadBackgroundImages = function() {</p>
+
+<pre><code>var bgImages = bg.getImages();
+for (var i = 0, len = bgImages.length; i &lt; len; i++) {
+    insertImage(bgImages[i]);
+    addImageToStorage(bgImages[i]);
+}
+bg.clearImages();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>loadBackgroundImages berfungsi mengambil image-image yang tadinya telah diadd di background page. Dapat dilihat dari method bg.getImages(). Setiap image yang tadinya telah diadd akan dimasukkan ke storage dan kemudian di masukkan ke DOM. Setelah semuanya dimasukkan, url-url yang ada dibackground page akan dihapus sehingga tidak terjadi duplikasi jika fungsi ini dipanggil kembali.</p>
+
+<p>``` javascript
+var loadStorage = function() {</p>
+
+<pre><code>getImages(function(images) {
+    for (var i = 0, len = images.length; i &lt; len; i++) {
+        insertImage(images[i]);
+    }
+});
+</code></pre>
+
+<p>}
+```</p>
+
+<p>loadStorage berfungsi untuk mengambil image-image yang terdapat di storage.</p>
+
+<p>``` javascript
+var clearClicked = function() {</p>
+
+<pre><code>storage.clear();
+$('.image').remove();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>kemudian jika tombol clear di klik, kita akan membersihkan storage dan menghapus semua image dari DOM.</p>
+
+<p>Begitulah code dari compero. Mudah kan? Jadi, cobalah dibuat. Hitung-hitung untuk membunuh waktu dan menambah pengetahuan.</p>
+
+<p>Silahkan dikomentari jika ada ide atau masalah.</p>
+]]></content>
+  </entry>
+  
+</feed>

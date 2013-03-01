@@ -1,24 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Praxmatig]]></title>
-  <link href="http://praxmatig.herokuapp.com/atom.xml" rel="self"/>
-  <link href="http://praxmatig.herokuapp.com/"/>
-  <updated>2013-03-01T20:02:12+07:00</updated>
-  <id>http://praxmatig.herokuapp.com/</id>
-  <author>
-    <name><![CDATA[wil huang]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan - Praxmatig</title>
+  <meta name="author" content="wil huang">
 
   
-  <entry>
-    <title type="html"><![CDATA[Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan]]></title>
-    <link href="http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/"/>
-    <updated>2013-03-01T19:31:00+07:00</updated>
-    <id>http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan</id>
-    <content type="html"><![CDATA[<p>Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image secara berdampingan.
+  <meta name="description" content="Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Praxmatig" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38929872-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Praxmatig</a></h1>
+  
+    <h2>Wil Huang's Personal Blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:praxmatig.herokuapp.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-01T19:31:00+07:00" pubdate data-updated="true">Mar 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image secara berdampingan.
 <a href="http://img839.imageshack.us/img839/4298/screenshotfdg.png">Compero</a></p>
 
 <p>Untuk mencobanya download <a href="https://github.com/wlzch/compero/archive/master.zip">compero</a>, setelah itu mengikuti <a href="http://developer.chrome.com/extensions/getstarted.html">tutorial</a> pada bagian &#8220;Load The Extension&#8221;</p>
@@ -557,59 +641,193 @@
 <p>Begitulah code dari compero. Mudah kan? Jadi, cobalah dibuat. Hitung-hitung untuk membunuh waktu dan menambah pengetahuan.</p>
 
 <p>Silahkan dikomentari jika ada ide atau masalah.</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Mengapa Langit Berwarna Biru]]></title>
-    <link href="http://praxmatig.herokuapp.com/blog/2013/03/01/mengapa-langit-berwarna-biru/"/>
-    <updated>2013-03-01T19:00:00+07:00</updated>
-    <id>http://praxmatig.herokuapp.com/blog/2013/03/01/mengapa-langit-berwarna-biru</id>
-    <content type="html"><![CDATA[<p><img src="http://sciencelens.files.wordpress.com/2012/08/blue_skies.jpg?w=800&amp;h=530" title="Blue Sky" alt="sky" /></p>
 
-<p>Kamu pasti pernah menatap langit apakah karena sedang tidak ada kerjaan, banyak pikiran, ataupun memang suka. Pada hari yang cerah, matahari bersinar terang diiringi nyanyian burung-burung dan desiran daun-daun yang menyejukkan hati (sok puitis wew). Disaat kamu menatap langit, pernahkah terpikir mengapa langit berwarna biru? Mengapa ketika matahari mulai terbenam langit malah berwarna kemerahan? Apakah ini semua terjadi karena takdir? Untuk sebagian orang mungkin takdir lah jawabannya, namun sebenarnya fenomena ini dapat dijelaskan secara sains. Dan saya akan menjelaskannya sesederhana mungkin.</p>
+<span class="byline author vcard">Posted by <span class="fn">wil huang</span></span>
 
-<!-- more -->
+      
 
 
-<p>Sebelum menjawab pertanyaan tersebut, saya akan membahas beberapa hal terlebih dahulu.</p>
 
-<h3>Cahaya</h3>
 
-<p><img class="center" src="http://www.sciencemadesimple.com/img_sky/wavet.gif"></p>
 
-<p>Cahaya adalah energi yang bergerak / berjalan dalam bentuk gelombang dimana energi dari cahaya tergantung dari panjang gelombang dan frekuensinya. Cahaya bergerak dengan kecepatan 299,792 km/detik.</p>
 
-<p>Panjang gelombang adalah jarak antara titik teratas dari 2 buah gelombang (ditandai sebagai wavelength pada gambar diatas) dan frekuensi adalah banyaknya gelombang yang dilalui dalam waktu 1 detik.</p>
 
-<p>Jadi semakin kecil panjang gelombang cahaya maka frekuensinya akan semakin besar sehingga energinya juga akan semakin besar dan juga sebaliknya.</p>
 
-<h3>Cahaya Tampak</h3>
-
-<p>Cahaya yang dipancarkan oleh matahari sebenarnya memiliki setiap warna yang ada. Meskipun kita melihat cahaya matahari berwarna putih, dengan menggunakan prisma kita akan dapat melihat kombinasi cahaya yang ada pada mataharin. Hal ini juga dapat kita lihat pada pelangi (Saya akan menjelaskan tentang pelangi pada postingan-postingan berikutnya). Kita dapat melihat warna dengan panjang gelombang yang lebih pendek (ungu, biru) sampai dengan panjang gelombang yang lebih panjang (merah, orange).</p>
-
-<h3>Penghamburan Rayleigh</h3>
-
-<p>Penghamburan Rayleigh menjelaskan bahwa jika suatu partikel lebih kecil dari panjang gelombang cahaya dilewati oleh cahaya tersebut, maka sebagian dari cahaya tersebut akan diserap. Kemudian setelah beberapa saat, cahaya tersebut akan diradiasikan kesegala arah. Warna yang memiliki panjang gelombang yang lebih pendek lebih sering diserap daripada panjang gelombang yang panjang.</p>
-
-<h3>Mengapa Langit Berwarna Biru?</h3>
-
-<p>Di udara terdapat molekul gas dan partikel-partikel lainnya seperti debu. Molekul gas lebih kecil dari panjang gelombang cahaya, jadi sesuai dengan penghamburan rayleigh maka cahaya akan diserap oleh gas. Karena biru dan ungu memiliki panjang gelombang yang lebih pendek maka diserap lebih banyak oleh gas dan kemudian akan dipancarkan kembali sebagai gabungan dari warna biru dan ungu yang menghasilkan warna biru yang lebih jenuh. Sedangkan warna merah, orange dan kuning yang memiliki panjang gelombang yang lebih panjang lebih banyak dilewati begitu saja.</p>
-
-<p>Selain itu, semakin jauh pandangan kita warna biru pada langit akan semakin memudar. Hal ini disebatkan karena warna biru yang dipancarkan tadi harus melewati gas yang akan terus-menerus menyerap warna biru tersebut dan kemudian memancarkannya lagi.</p>
-
-<h3>Lalu Mengapa Langit pada Sore Hari Berwarna Kemerahan?</h3>
-
-<p>Ketika matahari terbenam, matahari berada lebih jauh daripada saat pada siang hari. Hal ini menyebabkan jumlah gas yang harus dilalui semakin besar sehingga warna dengan panjang gelombang lebih pendek habis diserap sebelum sampai pada mata kita dan warna yang memiliki panjang gelombang lebih panjang seperti orange dan merahlah yang tersisa pada saat sampai pada mata.</p>
-
-<p>Referensi:</p>
-
-<ul>
-<li>http://www.sciencemadesimple.com/sky_blue.html</li>
-<li>http://en.wikipedia.org/wiki/Rayleigh_scattering</li>
-</ul>
-
-]]></content>
-  </entry>
   
-</feed>
+
+
+<time datetime="2013-03-01T19:31:00+07:00" pubdate data-updated="true">Mar 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/chrome-extensions/'>Chrome Extensions</a>, <a class='category' href='/blog/categories/compero/'>Compero</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/" data-via="wilhn" data-counturl="http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/01/mengapa-langit-berwarna-biru/" title="Previous Post: Mengapa Langit Berwarna Biru">&laquo; Mengapa Langit Berwarna Biru</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/">Compero: Chrome Extension Untuk Membandingkan Image Secara Bersampingan</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/01/mengapa-langit-berwarna-biru/">Mengapa Langit Berwarna Biru</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/wlzch">@wlzch</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'wlzch',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("wilhn", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/wilhn" class="twitter-follow-button" data-show-count="false">Follow @wilhn</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - wil huang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'praxmatig';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/';
+        var disqus_url = 'http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
