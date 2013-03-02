@@ -4,7 +4,7 @@
   <title><![CDATA[Praxmatig]]></title>
   <link href="http://praxmatig.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://praxmatig.herokuapp.com/"/>
-  <updated>2013-03-02T11:20:24+07:00</updated>
+  <updated>2013-03-02T11:31:57+07:00</updated>
   <id>http://praxmatig.herokuapp.com/</id>
   <author>
     <name><![CDATA[wil huang]]></name>
@@ -123,7 +123,7 @@
     <updated>2013-03-01T19:31:00+07:00</updated>
     <id>http://praxmatig.herokuapp.com/blog/2013/03/01/compero-chrome-extension-untuk-membandingkan-image-secara-bersampingan</id>
     <content type="html"><![CDATA[<p>Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image secara berdampingan.
-<a href="http://img839.imageshack.us/img839/4298/screenshotfdg.png">Compero</a></p>
+<img class="center" src="http://img839.imageshack.us/img839/4298/screenshotfdg.png"></p>
 
 <p>Untuk mencobanya download <a href="https://github.com/wlzch/compero/archive/master.zip">compero</a>, setelah itu mengikuti <a href="http://developer.chrome.com/extensions/getstarted.html">tutorial</a> pada bagian &#8220;Load The Extension&#8221;</p>
 
@@ -669,7 +669,7 @@
     <link href="http://praxmatig.herokuapp.com/blog/2013/03/01/mengapa-langit-berwarna-biru/"/>
     <updated>2013-03-01T19:00:00+07:00</updated>
     <id>http://praxmatig.herokuapp.com/blog/2013/03/01/mengapa-langit-berwarna-biru</id>
-    <content type="html"><![CDATA[<p><img src="http://sciencelens.files.wordpress.com/2012/08/blue_skies.jpg?w=800&amp;h=530" title="Blue Sky" alt="sky" /></p>
+    <content type="html"><![CDATA[<p><img class="center" src="http://sciencelens.files.wordpress.com/2012/08/blue_skies.jpg?w=800&h=530"></p>
 
 <p>Kamu pasti pernah menatap langit apakah karena sedang tidak ada kerjaan, banyak pikiran, ataupun memang suka. Pada hari yang cerah, matahari bersinar terang diiringi nyanyian burung-burung dan desiran daun-daun yang menyejukkan hati (sok puitis wew). Disaat kamu menatap langit, pernahkah terpikir mengapa langit berwarna biru? Mengapa ketika matahari mulai terbenam langit malah berwarna kemerahan? Apakah ini semua terjadi karena takdir? Untuk sebagian orang mungkin takdir lah jawabannya, namun sebenarnya fenomena ini dapat dijelaskan secara sains. Dan saya akan menjelaskannya sesederhana mungkin.</p>
 

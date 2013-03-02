@@ -6,7 +6,7 @@ comments: true
 categories: [sains]
 ---
 
-![sky](http://sciencelens.files.wordpress.com/2012/08/blue_skies.jpg?w=800&h=530 "Blue Sky")
+{% img center http://sciencelens.files.wordpress.com/2012/08/blue_skies.jpg?w=800&h=530 %}
 
 Kamu pasti pernah menatap langit apakah karena sedang tidak ada kerjaan, banyak pikiran, ataupun memang suka. Pada hari yang cerah, matahari bersinar terang diiringi nyanyian burung-burung dan desiran daun-daun yang menyejukkan hati (sok puitis wew). Disaat kamu menatap langit, pernahkah terpikir mengapa langit berwarna biru? Mengapa ketika matahari mulai terbenam langit malah berwarna kemerahan? Apakah ini semua terjadi karena takdir? Untuk sebagian orang mungkin takdir lah jawabannya, namun sebenarnya fenomena ini dapat dijelaskan secara sains. Dan saya akan menjelaskannya sesederhana mungkin.
 <!-- more -->
