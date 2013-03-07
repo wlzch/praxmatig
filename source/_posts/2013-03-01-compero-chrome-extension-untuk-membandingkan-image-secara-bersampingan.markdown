@@ -7,7 +7,7 @@ categories: [Chrome Extensions, Compero]
 ---
 
 Pada postingan kali ini saya akan membahas bagaimana saya membuat compero, chrome extension pertama saya yang gunanya untuk membandingkan image-image secara berdampingan.
-[Compero](http://img839.imageshack.us/img839/4298/screenshotfdg.png)
+{% img center http://img839.imageshack.us/img839/4298/screenshotfdg.png %}
 
 Untuk mencobanya download [compero](https://github.com/wlzch/compero/archive/master.zip), setelah itu mengikuti [tutorial](http://developer.chrome.com/extensions/getstarted.html) pada bagian "Load The Extension"
 
