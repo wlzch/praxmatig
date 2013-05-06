@@ -100,15 +100,15 @@ Aplikasi pada umumnya dijalankan melalui fungsi main. Namun tidak begitu halnya 
 
 Service adalah komponen aplikasi yang akan berjalan di background. Biasanya digunakan untuk menjalankan long running process.
 
-### Content Provider
+### [Content Provider](http://developer.android.com/guide/topics/providers/content-providers.html)
 
 Content Provider berfungsi untuk mengatur data misalnya mengambil data dari web dan memasukkannya ke database lokal. Android menggunakan SQLite sebagai database lokal. Dengan menggunakan content provider anda bisa mengambil atau menyediakan data aplikasi anda untuk aplikasi lain misalnya aplikasi anda bisa menggunakan data kontak yang disediakan sistem android.
 
-### Broadcast Receiver
+### [Broadcast Receiver](http://developer.android.com/reference/android/content/BroadcastReceiver.html)
 
 Broadcast Receiver adalah komponen yang merespon terhadap pemberitahuan broadcast misalnya anda dapat mengetahui apabila layar mati, low baterai atau adanya pengambilan foto baru.
 
-## Manifest
+## [Manifest](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
 Jika anda melihat project anda di eclipse, anda akan melihat file AndroidManifest.xml. Setiap aplikasi akan memiliki 1 manifest. Manifest digunakan untuk menunjukkan informasi-informasi dari aplikasi kepada sistem Android.
 
