@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I failed and failed and failed again"
+title: "How I Failed And Failed And Failed Again"
 date: 2013-06-28 11:21
 comments: true
 categories: [startup, motivation]
@@ -8,7 +8,7 @@ categories: [startup, motivation]
 
 Semua orang ingin membangun bisnisnya sendiri. Begitu juga dengan saya. Keinginan ini dimulai kira-kira 1 tahun yang lalu ketika saya masih bekerja. Saat itu trend [startup](http://en.wikipedia.org/wiki/Startup_company) sedang booming-boomingnya di US dan beberapa negara di Eropa, namun belum begitu terlihat di Indonesia. Setiap hari ada startup baru yang bermunculan dengan ide-ide dan inovasi-inovasi yang mengesankan. Bosan dengan pekerjaan saya waktu itu, dengan motivasi yang tinggi saya bersama dengan rekan kerja saya [Suwandi](https://twitter.com/wandi_lin) berencana untuk membuat startup.
 
-Ide pertama kami adalah sebuah layanan web bernama Plazoe. Diambil dari dokumen awal kami `Plazoe is an online mall solution build on node.js. It provides people to build online shop easily`. Saya bahkan sudah tidak begitu ingat ide awal dari Plazoe. Seingat saya, Plazoe itu mungkin mirip tokobagus. User bisa membuka toko dan jualan disana. Kelebihan yang kami pikirkan waktu itu adalah variasi produk. Misalnya, produk sepatu dapat memiliki variasi warna dengan stok yang berbeda-beda.
+Ide pertama kami adalah sebuah layanan web bernama Plazoe. Diambil dari dokumen awal kami "Plazoe is an online mall solution build on node.js. It provides people to build online shop easily". Saya bahkan sudah tidak begitu ingat ide awal dari Plazoe. Seingat saya, Plazoe itu mungkin mirip tokobagus. User bisa membuka toko dan jualan disana. Kelebihan yang kami pikirkan waktu itu adalah variasi produk. Misalnya, produk sepatu dapat memiliki variasi warna dengan stok yang berbeda-beda.
 
 2 bulan kami memantapkan ide dan mengimplementasikannya, kami memutuskan kalau ide kali ini gagal. Benar benar gagal. Terlalu kompleksnya aplikasi membuat kami menyerah. Dengan hanya 2 orang, kami berpikir jauh ke depan tentang bagaimana kami akan membuat API sehingga bisa digunakan 3rd party application, bagaimana technology stack yang kami gunakan akan bisa menahan traffic yang sangat besar. Hal yang saat itu tidak kami pikirkan adalah, bagaimana cara mendapatkan traffic yang besar tersebut?
 
@@ -28,11 +28,16 @@ Oh ya, saat itu saya juga mengirimkan ide lain dengan nama Transaksi yang menuru
 
 Ada beberapa hal yang tidak dapat saya sampaikan disini, namun dari ke 3 kegagalan tersebut saya mendapatkan banyak pelajaran berharga:
 
-*   jangan hanya mengikuti trend
+*   Trend Is Evil
+
     Ini merupakan salah satu kesalahan besar yang kami buat. Kami menghabiskan banyak sekali waktu untuk mempelajari teknologi-teknologi baru sehingga bukannya menyelesaikan masalah, malah semakin banyak masalah yang kami hadapi. Namun, meskipun begitu, karenanya saya menjadi banyak mengetahui teknologi-teknologi baru yang bahkan masih jarang di gunakan oleh programmer Indonesia lainnya.
-*   jangan berpikir terlalu jauh 
+
+*   Idea Is Good, But Execution Is Even Better
+
     Berpikir jauh itu bagus. Artinya anda memiliki visi. Namun dalam pelaksanaanya anda harus menyelesaikan masalah-masalah kecil yang paling penting terlebih dahulu. Saya yakin, ketika Zuck membuat Facemash dia tidak pernah membayangkan akan menjadi sebesar seperti sekarang. Begitu juga dengan twitter.
-*   discipline over passion
+
+*   Discipline Over Passion
+
     Passion adalah sesuatu yang penting dalam mendirikan startup. Jika anda membuat startup tanpa passion, saya yakin anda akan gagal. Tetapi anda tidak boleh hanya bergantung kepada passion karena passion tidak bisa bertahan selamanya. Anda pasti akan memiliki saat dimana anda kehilangan passion sama sekali seperti yang terjadi pada rekan saya. Saya sendiri juga pernah kehilangan passion dan saya yakin setiap orang sukses yang anda kenal pasti pernah mengalaminya. Karena itulah, anda juga harus memiliki disiplin. Buatlah aturan bagaimana anda akan membangun startup tersebut. Buatlah target.
 
 Dengan pelajaran tersebut, saya akan mendirikan startup lagi. Kali ini dengan rekan yang berbeda yaitu [Andy](https://www.facebook.com/andy.wie88) dan [Erwin](https://www.facebook.com/rwinz.cyruz). Untuk startup ini, saya akan membuat layanan khusus untuk kota Medan tercinta. Meskipun memiliki pasar yang besar dan banyak orang yang berbakat, saat ini Medan belum memiliki startup yang dapat diperhitungkan. Kami bahkan telah membuat business plan yang lengkap, jadi kali ini saya yakin kami akan berhasil.
