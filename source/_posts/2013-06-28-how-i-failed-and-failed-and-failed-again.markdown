@@ -24,6 +24,8 @@ Kemudian Telkom mengadakan program inkubasi bernama [indigoincubator](http://ind
 
 7 Juni 2013, twitter resmi indigoincubator mengumumkan 50 pemenang yang nantinya akan melalui sesi interview untuk dipilih menjadi 20 orang pemenang yang akan mengikuti inkubasi. Satu demi satu saya lihat nama pemenangnya, namun tidak ada nama LegitBite tertera disana. Saat itu saya langsung berpikir, inilah akhirnya.
 
+Saya tidak mengatakan bawah Suwandi adalah rekan yang buruh. Malah, jujur saja, saya suka bekerja sama dengannya. He is a good developer, a great designer and an awesome thinker. Tetapi skill bukannya satu-satunya hal yang perlu diperhatikan dalam menjalin kerja sama.
+
 Oh ya, saat itu saya juga mengirimkan ide lain dengan nama Transaksi yang menurut saya merupakan ide yang bagus sekali. Ya, menurut saya paling tidak.
 
 Ada beberapa hal yang tidak dapat saya sampaikan disini, namun dari ke 3 kegagalan tersebut saya mendapatkan banyak pelajaran berharga:
@@ -40,7 +42,7 @@ Ada beberapa hal yang tidak dapat saya sampaikan disini, namun dari ke 3 kegagal
 
     Passion adalah sesuatu yang penting dalam mendirikan startup. Jika anda membuat startup tanpa passion, saya yakin anda akan gagal. Tetapi anda tidak boleh hanya bergantung kepada passion karena passion tidak bisa bertahan selamanya. Anda pasti akan memiliki saat dimana anda kehilangan passion sama sekali seperti yang terjadi pada rekan saya. Saya sendiri juga pernah kehilangan passion dan saya yakin setiap orang sukses yang anda kenal pasti pernah mengalaminya. Karena itulah, anda juga harus memiliki disiplin. Buatlah aturan bagaimana anda akan membangun startup tersebut. Buatlah target.
 
-Dengan pelajaran tersebut, saya akan mendirikan startup lagi. Kali ini dengan rekan yang berbeda yaitu [Andy](https://www.facebook.com/andy.wie88) dan [Erwin](https://www.facebook.com/rwinz.cyruz). Untuk startup ini, saya akan membuat layanan khusus untuk kota Medan tercinta. Meskipun memiliki pasar yang besar dan banyak orang yang berbakat, saat ini Medan belum memiliki startup yang dapat diperhitungkan. Kami bahkan telah membuat business plan yang lengkap, jadi kali ini saya yakin kami akan berhasil.
+Dengan pelajaran tersebut, saya akan mendirikan startup lagi. Kali ini dengan rekan yang berbeda yaitu [Andy](https://www.facebook.com/andy.wie88) dan [Erwin](https://www.facebook.com/rwinz.cyruz). Untuk startup ini, saya akan membuat layanan khusus untuk kota Medan tercinta. Meskipun memiliki pasar yang besar dan banyak orang yang berbakat, saat ini Medan belum memiliki startup yang dapat diperhitungkan. Kami telah memikirkan startup kali ini dengan baik, jadi kali ini saya yakin kami akan berhasil.
 
 *   kami sedang mencari investor yang berminat berinventasi pada startup digital
 *   kami juga sedang mencari tempat yang murah yang bisa kami jadikan kantor
