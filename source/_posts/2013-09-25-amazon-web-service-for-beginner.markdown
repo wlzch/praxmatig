@@ -6,6 +6,8 @@ comments: true
 categories: [aws, technology, cloud]
 ---
 
+{% img center http://www.o2networks.com.au/sites/default/files/vendors/AWS_LOGO_CMYK.png Amazon Web Service %}
+
 ## Apa itu Amazon Web Service (AWS) ?
 AWS adalah layanan cloud computing yang berupa kumpulan web service yang ditawarkan oleh [Amazon](http://aws.amazon.com). Sebelum kita membahas aws lebih lanjut, kita akan membahas apa sebenarnya cloud computing itu?
 
