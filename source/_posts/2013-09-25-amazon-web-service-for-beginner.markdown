@@ -33,7 +33,7 @@ AWS menyediakan bermacam-macam layanan yaitu:
 10. ElasticCache
 11. [Dan banyak lagi](http://aws.amazon.com/products/)
 
-Karena postingan ini untuk beginner dan tidak semua layanan bisa saya gunakan, saya hanya akan membahas beberapa layanan saja.
+Karena postingan ini untuk beginner dan tidak semua layanan bisa saya gunakan, saya hanya akan membahas beberapa layanan saja dan akan saya bagi menjadi beberapa bagian.
 
 ## Kelebihan AWS
 
